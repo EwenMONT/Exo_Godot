@@ -8,6 +8,7 @@ var gravity = 9.8
 
 @onready var head = $Head
 @onready var cam = $Head/Camera3D
+@onready var gun = $Head/gun
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

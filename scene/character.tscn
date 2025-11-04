@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbh71eph8pwue"]
+[gd_scene load_steps=5 format=3 uid="uid://cbh71eph8pwue"]
 
-[ext_resource type="Script" uid="uid://c7jtaywr7jd1a" path="res://character.gd" id="1_glpr6"]
+[ext_resource type="Script" uid="uid://c7jtaywr7jd1a" path="res://script/character.gd" id="1_glpr6"]
+[ext_resource type="PackedScene" uid="uid://b22npt4s8m2pl" path="res://scene/gun.tscn" id="2_pjt0s"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vu45j"]
 
@@ -22,3 +23,6 @@ shape = SubResource("CapsuleShape3D_vu45j")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0.58656037, 0.3927343)
 current = true
 fov = 52.6582
+
+[node name="gun" parent="Head/Camera3D" instance=ExtResource("2_pjt0s")]
+transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, 0.5615298, 0.032311797, 0.39273423)

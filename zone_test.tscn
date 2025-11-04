@@ -1,6 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://2782fhjecg13"]
+[gd_scene load_steps=13 format=3 uid="uid://2782fhjecg13"]
 
-[ext_resource type="PackedScene" uid="uid://cbh71eph8pwue" path="res://character.tscn" id="1_iyl5p"]
+[ext_resource type="PackedScene" uid="uid://cbh71eph8pwue" path="res://scene/character.tscn" id="1_iyl5p"]
+
+[sub_resource type="GDScript" id="GDScript_iyl5p"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_iyl5p"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -36,6 +38,7 @@ albedo_color = Color(0, 0, 0, 1)
 albedo_color = Color(0, 0, 1, 1)
 
 [node name="Zone_test" type="Node3D"]
+script = SubResource("GDScript_iyl5p")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ob1jx")

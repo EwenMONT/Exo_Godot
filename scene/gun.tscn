@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b22npt4s8m2pl"]
+
+[ext_resource type="Script" uid="uid://cmdnfbb6yf8c2" path="res://script/gun.gd" id="1_h8bng"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_r8ywq"]
+top_radius = 0.25
+bottom_radius = 0.25
+height = 2.5
+radial_segments = 8
+
+[node name="gun" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+script = ExtResource("1_h8bng")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_r8ywq")
+
+[node name="pos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2460436, -5.4466295e-08)
