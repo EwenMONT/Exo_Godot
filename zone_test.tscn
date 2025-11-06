@@ -1,10 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://2782fhjecg13"]
+[gd_scene load_steps=15 format=3 uid="uid://2782fhjecg13"]
 
 [ext_resource type="PackedScene" uid="uid://cbh71eph8pwue" path="res://scene/character.tscn" id="1_iyl5p"]
 [ext_resource type="PackedScene" uid="uid://cfje6sdt5r120" path="res://Assets/Tomato.glb" id="2_yg2ly"]
 [ext_resource type="PackedScene" uid="uid://bndje22h7exy2" path="res://Assets/Carrot.glb" id="3_4f6sl"]
-[ext_resource type="PackedScene" uid="uid://wedpq1wctghu" path="res://Assets/Sucette.glb" id="4_xfq1h"]
-[ext_resource type="PackedScene" uid="uid://drrevda35ksej" path="res://Assets/CupcakeBazooka.glb" id="5_pqehc"]
 
 [sub_resource type="GDScript" id="GDScript_iyl5p"]
 
@@ -103,9 +101,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5106, 1.93031, 13.1623)
 
 [node name="Carrot2" parent="." instance=ExtResource("3_4f6sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9358, 0.410982, 17.1114)
-
-[node name="Sucette" parent="." instance=ExtResource("4_xfq1h")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 5.85992, -0.0311146, 5.86364)
-
-[node name="CupcakeBazooka" parent="." instance=ExtResource("5_pqehc")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 3.47924, -0.0311151, 4.7374)

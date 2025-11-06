@@ -13,7 +13,7 @@ func _physics_process(delta):
 func shoot():
 	var instance = bullet.instantiate()
 	instance.position = pos.global_position
-	#instance.basis = pos.global_transform.basis
+	instance.basis = pos.global_transform.basis
 	get_parent().add_child(instance)
 	print("squalala")
 	print(instance.position)

@@ -18,11 +18,11 @@ shape = SubResource("CapsuleShape3D_vu45j")
 [node name="Head" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0.58656, 0.544077)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0.82091236, 0.544077)
 current = true
 fov = 52.6582
 
 [node name="gun" parent="Head/Camera3D" instance=ExtResource("2_pjt0s")]
-transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0.56153, 0.0323118, 0.392734)
+transform = Transform3D(0.069566205, 0, 0.0077809705, 0, 0.07, 0, -0.0077809705, 0, 0.069566205, 0.67666626, 0.19988322, -0.7805373)
 
 [node name="Cupcake_anim3" parent="." instance=ExtResource("3_d7vt2")]

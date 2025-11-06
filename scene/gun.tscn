@@ -1,19 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://b22npt4s8m2pl"]
 
 [ext_resource type="Script" uid="uid://cmdnfbb6yf8c2" path="res://script/gun.gd" id="1_h8bng"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_r8ywq"]
-top_radius = 0.25
-bottom_radius = 0.25
-height = 2.5
-radial_segments = 8
+[ext_resource type="PackedScene" uid="uid://drrevda35ksej" path="res://Assets/CupcakeBazooka.glb" id="2_h5mb1"]
 
 [node name="gun" type="Node3D"]
 script = ExtResource("1_h8bng")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CylinderMesh_r8ywq")
-
 [node name="RayCast3D" type="RayCast3D" parent="."]
-target_position = Vector3(0, -10, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06334543, 0.46484905, 1.638268)
+target_position = Vector3(0, 0, 1)
 debug_shape_thickness = 3
+
+[node name="CupcakeBazooka" parent="." instance=ExtResource("2_h5mb1")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 1.152825, -1, -1.1989626)
