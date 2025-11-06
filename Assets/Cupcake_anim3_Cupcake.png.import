@@ -2,20 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnysgf5w2nx3j"
-path="res://.godot/imported/coin.png-edb34a1bb66c10fa4e6273457e942cb6.ctex"
+uid="uid://l3wt8c3ih75r"
+path.s3tc="res://.godot/imported/Cupcake_anim3_Cupcake.png-f115a8463f5bf77ee7b5061e23aa526a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "4a9b33b44f8a098a5bd186296e26200b"
 }
 
 [deps]
 
-source_file="res://kenney-3d-platformer/sprites/coin.png"
-dest_files=["res://.godot/imported/coin.png-edb34a1bb66c10fa4e6273457e942cb6.ctex"]
+source_file="res://Assets/Cupcake_anim3_Cupcake.png"
+dest_files=["res://.godot/imported/Cupcake_anim3_Cupcake.png-f115a8463f5bf77ee7b5061e23aa526a.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -23,7 +27,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -33,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
