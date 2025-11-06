@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://coxqxdqv0dqss"]
+
+[ext_resource type="Script" uid="uid://b23i8ygmi5bdl" path="res://script/sucette_rocket.gd" id="1_rw4ma"]
+[ext_resource type="PackedScene" uid="uid://wedpq1wctghu" path="res://Assets/Sucette.glb" id="1_vrtwj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rw4ma"]
+
+[node name="Area3D" type="Area3D"]
+script = ExtResource("1_rw4ma")
+
+[node name="Sucette" parent="." instance=ExtResource("1_vrtwj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.865387, -3.3094053, -3.0711288)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_rw4ma")

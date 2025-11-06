@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b830o1df4t6lo"]
+
+[ext_resource type="PackedScene" uid="uid://drrevda35ksej" path="res://Assets/CupcakeBazooka.glb" id="1_72q5t"]
+
+[node name="bazooka" type="Node3D"]
+
+[node name="CupcakeBazooka" parent="." instance=ExtResource("1_72q5t")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2102966, 1.4583094, 2.8454163)
+target_position = Vector3(0, 0, 1)

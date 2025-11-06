@@ -1,39 +1,43 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.003
 
-var gravity = 9.8
+@export var vitesse_max: float = 3.5
 
+@onready var player = $Cupcake_anim3
+@onready var animation = $Cupcake_anim3/AnimationPlayer
+@onready var pos = $bazooka/RayCast3D
 
-@onready var head = $Head
-@onready var cam = $Head/Camera3D
+var orientation: float = 0 
+var rocket = load("res://scene/sucette_rocket.tscn")
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	print("rotation du perso au lancement : ", player.rotation * 180./PI)
 
-func _unhandled_input(event):
-	if event is InputEventMouseMotion:
-		head.rotate_y(-event.relative.x * SENSITIVITY)
-		cam.rotate_x(event.relative.y * SENSITIVITY)
-		cam.rotation.x = clamp(cam.rotation.x, deg_to_rad(-40), deg_to_rad(60))
-
-func _physics_process(delta):
-	if not is_on_floor():
-		velocity.y -= gravity * delta
+func _process(delta: float) -> void:
 	
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	var input_lr = Input.get_axis("player_left", "player_right")
+	var input_ud = Input.get_axis("player_down", "player_up")
+	var vitesse = Vector3.RIGHT * input_lr + Vector3.FORWARD * input_ud
 	
-	var input_dir = Input.get_vector("right", "left", "down", "up")
-	var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
-	if direction :
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+	if vitesse == Vector3(0.0, 0.0, 0.0):
+		animation.play("Idle")
 	else :
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		animation.play("Walking")
 	
-	move_and_slide()
+	position += vitesse_max * vitesse * delta
+	if vitesse != Vector3.ZERO:
+		orientation = (-Vector3.FORWARD).signed_angle_to(vitesse, Vector3.UP)
+	rotation.y = orientation
+	
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
+
+func shoot():
+	var instance = rocket.instantiate()
+	instance.position = pos.global_position
+	instance.basis = pos.global_transform.basis
+	get_parent().add_child(instance)
+	print("squalala")
+	print(instance.position)
+	pass

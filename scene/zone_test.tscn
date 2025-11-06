@@ -1,8 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://2782fhjecg13"]
+[gd_scene load_steps=13 format=3 uid="uid://b76rq08sri2py"]
 
-[ext_resource type="PackedScene" uid="uid://cbh71eph8pwue" path="res://scene/character.tscn" id="1_iyl5p"]
-[ext_resource type="PackedScene" uid="uid://cfje6sdt5r120" path="res://Assets/Tomato.glb" id="2_yg2ly"]
-[ext_resource type="PackedScene" uid="uid://bndje22h7exy2" path="res://Assets/Carrot.glb" id="3_4f6sl"]
+[ext_resource type="PackedScene" uid="uid://cbh71eph8pwue" path="res://scene/character.tscn" id="1_r0s7w"]
 
 [sub_resource type="GDScript" id="GDScript_iyl5p"]
 
@@ -51,9 +49,6 @@ use_collision = true
 size = Vector3(1, 0.1, 1)
 material = SubResource("StandardMaterial3D_iyl5p")
 
-[node name="character" parent="." instance=ExtResource("1_iyl5p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11679, 0)
-
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.130801, 3.08473, -29.138)
 use_collision = true
@@ -96,8 +91,4 @@ use_collision = true
 size = Vector3(5, 1, 5)
 material = SubResource("StandardMaterial3D_xfq1h")
 
-[node name="Tomato2" parent="." instance=ExtResource("2_yg2ly")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5106, 1.93031, 13.1623)
-
-[node name="Carrot2" parent="." instance=ExtResource("3_4f6sl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9358, 0.410982, 17.1114)
+[node name="character" parent="." instance=ExtResource("1_r0s7w")]
