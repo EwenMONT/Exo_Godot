@@ -15,6 +15,10 @@ run/main_scene="uid://b76rq08sri2py"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[dotnet]
+
+project/assembly_name="Exo_jeanne_ewen"
+
 [input]
 
 player_left={
