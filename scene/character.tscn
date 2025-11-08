@@ -13,6 +13,9 @@ script = ExtResource("1_k8rrn")
 
 [node name="Cupcake_anim3" parent="." instance=ExtResource("1_3x35j")]
 
+[node name="bazooka" parent="Cupcake_anim3" instance=ExtResource("3_d7vt2")]
+transform = Transform3D(0.9886779, 0.15005304, 0, -0.15005304, 0.9886779, 0, 0, 0, 1, 1.5209002, 0, -0.8014114)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00233641, 0.829692, -0.00185227)
 shape = SubResource("CapsuleShape3D_vu45j")
@@ -21,6 +24,3 @@ shape = SubResource("CapsuleShape3D_vu45j")
 transform = Transform3D(-1, 1.7763568e-15, 8.7422805e-08, 3.1799082e-08, 0.9315009, 0.363739, -8.1434415e-08, 0.363739, -0.9315009, 0, 2.7793484, -3.4060464)
 current = true
 fov = 52.6582
-
-[node name="bazooka" parent="." instance=ExtResource("3_d7vt2")]
-transform = Transform3D(0.9886779, 0.15005304, 0, -0.15005304, 0.9886779, 0, 0, 0, 1, 1.5209002, 0, -0.8014114)

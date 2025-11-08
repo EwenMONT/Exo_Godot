@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://b76rq08sri2py"]
 
 [ext_resource type="PackedScene" uid="uid://cbh71eph8pwue" path="res://scene/character.tscn" id="1_r0s7w"]
-[ext_resource type="PackedScene" uid="uid://bndje22h7exy2" path="res://Assets/Carrot.glb" id="2_rkwgc"]
-[ext_resource type="PackedScene" uid="uid://cfje6sdt5r120" path="res://Assets/Tomato.glb" id="3_mtna3"]
+[ext_resource type="PackedScene" uid="uid://c6lt5mmb7xlfn" path="res://Assets/indestructable_tomato_sama.tscn" id="3_2iitm"]
+[ext_resource type="PackedScene" uid="uid://chw2uaati2jmr" path="res://Assets/destroyable_carort_dono.tscn" id="3_ffpp4"]
 
 [sub_resource type="GDScript" id="GDScript_iyl5p"]
 
@@ -95,17 +95,17 @@ material = SubResource("StandardMaterial3D_xfq1h")
 
 [node name="character" parent="." instance=ExtResource("1_r0s7w")]
 
-[node name="Carrot2" parent="." instance=ExtResource("2_rkwgc")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.0863953, 0.410982, 20.7675)
+[node name="Carrot4" parent="." instance=ExtResource("3_ffpp4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11252928, 0, 20.842106)
 
-[node name="Carrot2" parent="Carrot2" instance=ExtResource("2_rkwgc")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.283679, 0.277369, -34.0561)
+[node name="Carrot2" parent="." instance=ExtResource("3_ffpp4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2672162, 0, -6.437707)
 
-[node name="Tomato4" parent="." instance=ExtResource("3_mtna3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.52994, 2.28905, -0.999894)
+[node name="Tomato5" parent="." instance=ExtResource("3_2iitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4522495, 0.5839045, 0)
 
-[node name="Tomato2" parent="." instance=ExtResource("3_mtna3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5281, 2.46225, 0.446067)
+[node name="Tomato2" parent="." instance=ExtResource("3_2iitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.813611, 0.6596062, 0)
 
-[node name="Tomato3" parent="." instance=ExtResource("3_mtna3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0562, 2.37565, 1.08443)
+[node name="Tomato4" parent="." instance=ExtResource("3_2iitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.754649, 0.6420827, 0)

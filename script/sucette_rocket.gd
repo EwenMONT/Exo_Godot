@@ -7,3 +7,7 @@ func _process(delta):
 
 func _on_body_shape_entered(body_rid: RID, body: Node3D, body_shape_index: int, local_shape_index: int) -> void:
 	self.queue_free()
+
+
+func _on_area_entered(area: Area3D) -> void:
+	self.queue_free()
